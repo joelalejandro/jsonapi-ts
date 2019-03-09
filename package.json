@@ -1,5 +1,5 @@
 {
-  "name": "@ebryn/jsonapi-ts",
+  "name": "@joelalejandro/jsonapi-ts",
   "version": "0.1.2",
   "description": "",
   "main": "dist/index.js",
@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ebryn/jsonapi-ts.git"
+    "url": "git+https://github.com/joelalejandro/jsonapi-ts.git"
   },
   "author": "Erik Bryn",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ebryn/jsonapi-ts/issues"
+    "url": "https://github.com/joelalejandro/jsonapi-ts/issues"
   },
-  "homepage": "https://github.com/ebryn/jsonapi-ts#readme",
+  "homepage": "https://github.com/joelalejandro/jsonapi-ts#readme",
   "dependencies": {
     "ember-cli-string-utils": "^1.1.0",
     "escape-string-regexp": "^1.0.5",
