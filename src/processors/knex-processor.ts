@@ -47,7 +47,7 @@ const getAttributes = (attributes, fields, type): [] => {
 export default class KnexProcessor<
   ResourceT = Resource
 > extends OperationProcessor<ResourceT> {
-  private knex: Knex;
+  protected knex: Knex;
 
   constructor(public knexOptions: Knex.Config = {}) {
     super();
