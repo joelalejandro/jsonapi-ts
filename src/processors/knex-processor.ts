@@ -104,7 +104,10 @@ export default class KnexProcessor<
     const { type } = op.ref;
     const tableName = this.typeToTableName(type);
 
-    const [id] = await this.knex(tableName).insert(op.data.attributes);
+    const [id] = await this.knex(tableName).insert({
+      ...(op.data.id ? { id: op.data.id } : {}),
+      ...op.data.attributes
+    });
     const records: KnexRecord[] = await this.knex(tableName)
       .where({ id })
       .select();
