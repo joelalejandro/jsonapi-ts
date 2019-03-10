@@ -68,7 +68,7 @@ class KnexProcessor extends operation_processor_1.default {
     async add(op) {
         const { type } = op.ref;
         const tableName = this.typeToTableName(type);
-        const [id] = await this.knex(tableName).insert(op.data.attributes);
+        const [id] = await this.knex(tableName).insert(Object.assign({}, (op.data.id ? { id: op.data.id } : {}), op.data.attributes));
         const records = await this.knex(tableName)
             .where({ id })
             .select();
