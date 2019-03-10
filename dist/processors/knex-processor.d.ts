@@ -4,7 +4,7 @@ import { KnexRecord, Operation } from "../types";
 import OperationProcessor from "./operation-processor";
 export default class KnexProcessor<ResourceT = Resource> extends OperationProcessor<ResourceT> {
     knexOptions: Knex.Config;
-    private knex;
+    protected knex: Knex;
     constructor(knexOptions?: Knex.Config);
     get(op: Operation): Promise<ResourceT[]>;
     remove(op: Operation): Promise<void>;
